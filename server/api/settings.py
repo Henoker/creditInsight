@@ -31,6 +31,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
+    # Local
+    "accounts.apps.AccountsConfig",  # new
+
 
 ]
 
@@ -64,6 +67,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "api.wsgi.application"
 
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
